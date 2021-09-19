@@ -1,6 +1,6 @@
 {
   "name": "wd-covid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "whitesping discord covid",
   "author": "whitesping",
   "main": "bin/main.js",
@@ -10,9 +10,6 @@
     "discord",
     "bot",
     "covid"
-  ],
-  "files": [
-    "bin"
   ],
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
