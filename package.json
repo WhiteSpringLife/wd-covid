@@ -1,0 +1,25 @@
+{
+  "name": "wd-coivd",
+  "version": "1.0.0",
+  "description": "whitesping discord covid",
+  "author": "",
+  "main": "bin/index.js",
+  "bin": {
+    "covid": "bin/cli.js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "whitesping",
+    "discord",
+    "bot",
+    "covid"
+  ],
+  "files": [
+    "cli"
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "commander": "^8.2.0",
+    "request": "^2.88.2"
+  }
+}
