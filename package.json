@@ -1,6 +1,6 @@
 {
   "name": "wd-covid",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "whitesping discord covid",
   "author": "whitesping",
   "main": "bin/main.js",
