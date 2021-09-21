@@ -6,6 +6,6 @@ const { program } = require('commander')
 // program.action(cmd => console.log('✓ Running!!'))
 
 // action
-program.action(cmd => require("./covid").then(v => console.log(v)))
+program.action(cmd => require("./covid").run().then(v => console.log(v)))
 
 program.parse(process.argv)

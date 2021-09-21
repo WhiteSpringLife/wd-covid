@@ -1,3 +1,3 @@
 const covid = require("./main");
 
-covid.then(v => console.log(v));
+covid.run().then(v => console.log(v));
