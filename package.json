@@ -1,9 +1,9 @@
 {
   "name": "wd-covid",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "whitesping discord covid",
   "author": "whitesping",
-  "main": "bin/main.js",
+  "main": "index.js",
   "license": "MIT",
   "keywords": [
     "whitesping",
@@ -12,7 +12,6 @@
     "covid"
   ],
   "dependencies": {
-    "commander": "^8.2.0",
     "request": "^2.88.2"
   }
 }
