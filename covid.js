@@ -10,18 +10,17 @@ module.exports = {
                 let data = JSON.parse(body).result;
                 let updatetime = data.updatetime;
                 let year = data.updatetime.slice(0,5);
-                let list = data.list;
-                let last = list[list.length-1];
                 let covidList = "누적 확진자 현황 : \`\`" + '(' + updatetime + ' 기준)' + "\`\`\n\n";
-                covidList += "신규 확진자 : \`\`" + last.total.replace(",", "") + "\`\`\n";
-                covidList += "국내발생 : \`\`" + last.local.replace(",", "") + "\`\`\n";
-                covidList += "해외유입 : \`\`" + last.oversea.replace(",", "") + "\`\`\n\n";
+                covidList += "신규 확진자 : \`\`" + data.data.dailyCnt[data.data.dailyCnt.length-1] + "\`\`\n";
+                covidList += "7일 평균 확진자 : \`\`" + data.data.average[data.data.average.length-1] + "\`\`\n\n";
                 covidList += `\`\`\`md\n`;
                 covidList += `# 코로나 기록\n`;
-                covidList += `[날짜][신규확진자] <국내발생 해외유입>\n`;
-                covidList += list.map((x) => {
-                    return `[${year}${x.date}][${x.total.replace(",", "")}] <${x.local.replace(",", "")} ${x.oversea.replace(",", "")}>`;
-                }).join('\n');
+                covidList += `[날짜][신규확진자] <7일평균확진자>\n`;
+                let list = [];
+                for (let i = 0; i < 7; i++) {
+                    list.push(`[${year}${data.data.xAxis[i]}][${data.data.dailyCnt[i]}] <${data.data.average[i]}>`);
+                }
+                covidList += list.join('\n');
                 covidList += `\`\`\``;
                 resolve(`${covidList}`);
             })
