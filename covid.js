@@ -1,6 +1,6 @@
 const request = require("request")
 
-let url = "https://m.search.naver.com/p/csearch/content/nqapirender.nhn?where=m&pkid=9005&key=diffV2API";
+let url = "https://m.search.naver.com/p/csearch/content/nqapirender.nhn?where=m&pkid=9005&key=diffV2API&u1=1&u2=7";
 
 module.exports = {
     run: async () => {
